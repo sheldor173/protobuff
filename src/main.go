@@ -11,8 +11,10 @@ import (
 func main() {
 
 	message := proto.Game{
-		Home:  "Barcelona",
-		Away:  "Madrid",
+		Team: &proto.Team{
+			Home: "Barcelona",
+			Away: "Madrid",
+		},
 		Venue: "Barcelona Stadium",
 		Date:  time.Now().String(),
 	}
@@ -41,9 +43,9 @@ func main() {
 
 	fmt.Println(data.Date)
 
-	fmt.Println(data.Away)
+	fmt.Println(data.Team.Away)
 
-	fmt.Println(data.Home)
+	fmt.Println(data.Team.Home)
 
 	fmt.Println(data.Venue)
 

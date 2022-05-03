@@ -2,9 +2,14 @@ syntax = "proto3";
 
 package proto;
 
-message Game {
+message Team{
   string home = 1;
   string away = 2;
-  string venue = 3;
-  string date = 4;
+}
+
+message Game {
+
+  Team  team = 1;
+  string venue = 2;
+  string date = 3;
 }
